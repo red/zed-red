@@ -1,0 +1,5 @@
+*.wasm
+grammars
+target
+
+test_zed_moonbit

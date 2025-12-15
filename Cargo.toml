@@ -1,0 +1,13 @@
+[package]
+name = "zed_red"
+version = "0.1.1"
+edition = "2021"
+publish = false
+license = "Apache-2.0"
+
+[lib]
+path = "src/red.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+zed_extension_api = "0.7.0"
