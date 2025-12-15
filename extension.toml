@@ -10,4 +10,4 @@ repository = "https://github.com/red/zed-red"
 
 [grammars.red]
 repository = "https://github.com/red/tree-sitter-red"
-commit = "9b32196c8cfedf40694ad3c297107cebef24498d"
+commit = "1ee990a2be8e6d90d1d2183da18ef0842ce7a3ee"

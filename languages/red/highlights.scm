@@ -36,7 +36,7 @@
 
 [
   (escaped_char)
-  (escaped_value)
+  (construction)
 ] @string.escape
 
 [
@@ -47,8 +47,9 @@
   (money)
   (date)
   (time)
+  (tuple)
 ] @number
-(tuple) @property
+
 (boolean) @boolean
 (char) @string.special.symbol
 
@@ -72,19 +73,34 @@
 (comment) @comment
 
 ;; Functions
+
 (function
-    name: (_) @function.definition
+    name: (set_word) @function.definition
+    func: _ @keyword)
+
+(function
+    name: (set_word) @function.definition
     func: _ @keyword
     spec: (block (refinement) @emphasis
-        (#eq? @emphasis "/local")))
+        (#eq? @emphasis "/local"))?)
+
+(function
+    name: (set_path (path (word) @function.definition) @function.definition) @function.definition
+    func: _ @keyword
+    spec: (block (refinement) @emphasis
+        (#eq? @emphasis "/local"))?)
 
 (does
-    name: (_) @function.definition
+    name: (set_word) @function.definition
+    key: _ @keyword)
+
+(does
+    name: (set_path (path (word) @function.definition) @function.definition) @function.definition
     key: _ @keyword)
 
 ;; Contexts & Objects
 (context
-    name: (_) @constructor
+    name: (_) @variable
     ctx: _ @keyword)
 
 ;; Errors
