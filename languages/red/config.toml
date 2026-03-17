@@ -3,9 +3,9 @@ grammar = "red"
 path_suffixes = ["red", "reds"]
 line_comments = ["; ", ";; ", ";-- "]
 first_line_pattern = '^\s*Red(/System)?($|\s)'
-autoclose_before = ";:.,=}])>"
-word_characters = ["-", "!", "?", "*", "~", "|", ".", ">", "+", "^"]
-completion_query_characters = ["-", "*", "~", "|", ".", ">", "+", "^"]
+autoclose_before = ";:.,}])>"
+word_characters = ["-", "=", "!", "?", "*", "~", "|", ".", ">", "+", "^"]
+completion_query_characters = ["-", "=", "!", "?", "*", "~", "|", ".", ">", "+", "^"]
 brackets = [
     { start = "{", end = "}", close = true, newline = true },
     { start = "[", end = "]", close = true, newline = true },
